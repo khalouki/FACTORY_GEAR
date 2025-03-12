@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factory Gear - Automatisme • Robotique • Maintenance</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Animate cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        #mobile-menu {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform-origin: top;
+            opacity: 0;
+            transform: scaleY(0);
+        }
+
+        #mobile-menu:not(.hidden) {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .tech-scroll {
+            animation: scroll 30s linear infinite;
+            width: max-content;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-white">
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+        <div class="container mx-auto px-4 flex h-16 items-center justify-between">
+            <!-- Logo -->
+            <div class="font-bold text-xl">FACTORY GEAR</div>
+
+            <!-- Desktop Navigation (Hidden on Mobile) -->
+            <nav class="hidden md:flex gap-6">
+                <a href="#about"
+                    class="text-sm font-medium transition-colors hover:bg-gray-100 px-4 py-2 rounded-lg">Qui
+                    Sommes-Nous</a>
+                <a href="#why-us"
+                    class="text-sm font-medium transition-colors hover:bg-gray-100 px-4 py-2 rounded-lg">Pourquoi
+                    Nous</a>
+                <a href="#expertise"
+                    class="text-sm font-medium transition-colors hover:bg-gray-100 px-4 py-2 rounded-lg">Notre
+                    Expertise</a>
+                <a href="#qualities"
+                    class="text-sm font-medium transition-colors hover:bg-gray-100 px-4 py-2 rounded-lg">Nos
+                    Qualités</a>
+                <a href="#pricing"
+                    class="text-sm font-medium transition-colors hover:bg-gray-100 px-4 py-2 rounded-lg">Tarifs</a>
+                <a href="#contact"
+                    class="text-sm font-medium transition-colors hover:bg-gray-100 px-4 py-2 rounded-lg">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden px-4 py-2 rounded border border-gray-300 text-sm">
+                <i data-lucide="align-justify" class="w-4 h-4"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation (Hidden by Default) -->
+        <nav id="mobile-menu"
+            class="md:hidden bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-t overflow-hidden transition-all duration-300 max-h-0">
+            <div class="container mx-auto px-4 py-4">
+                <a href="#about"
+                    class="block py-2 text-sm font-medium transition-colors hover:bg-gray-100 px-4 rounded-lg">Qui
+                    Sommes-Nous</a>
+                <a href="#why-us"
+                    class="block py-2 text-sm font-medium transition-colors hover:bg-gray-100 px-4 rounded-lg">Pourquoi
+                    Nous</a>
+                <a href="#expertise"
+                    class="block py-2 text-sm font-medium transition-colors hover:bg-gray-100 px-4 rounded-lg">Notre
+                    Expertise</a>
+                <a href="#qualities"
+                    class="block py-2 text-sm font-medium transition-colors hover:bg-gray-100 px-4 rounded-lg">Nos
+                    Qualités</a>
+                <a href="#pricing"
+                    class="block py-2 text-sm font-medium transition-colors hover:bg-gray-100 px-4 rounded-lg">Tarifs</a>
+                <a href="#contact"
+                    class="block py-2 text-sm font-medium transition-colors hover:bg-gray-100 px-4 rounded-lg">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Carousel -->
+    <section class="relative h-[80vh] flex items-center justify-center bg-[#000000a1] text-white overflow-hidden">
+        <div id="hero-carousel" class="absolute inset-0">
+            <!-- Background images will be inserted here by JavaScript -->
+        </div>
+        <div class="container mx-auto px-4 relative z-10 text-center space-y-6">
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight">AUTOMATISME • ROBOTIQUE • MAINTENANCE</h1>
+            <p class="text-xl max-w-3xl mx-auto">
+                Solutions industrielles innovantes pour optimiser vos performances
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 pt-4">
+                <button class="px-6 py-3 text-lg font-medium rounded-md bg-primary hover:bg-primary/90 text-white">
+                    <a href="#expertise">Nos Service</a>
+                </button>
+                <button
+                    class="px-6 py-3 text-lg font-medium rounded-md border border-white text-white hover:bg-white/10">
+                    <a href="contact.html">Contactez-nous</a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">QUI SOMMES-NOUS ?</h2>
+            <div class="max-w-3xl mx-auto text-lg">
+                <p class="mb-6">
+                    Notre entreprise, spécialisée dans la maintenance, l'automatisme et la robotique, propose des
+                    services de
+                    maintenance préventive et corrective, ainsi que la conception, l'installation et la maintenance de
+                    systèmes automatisés.
+                </p>
+                <p>
+                    Nous nous engageons à accompagner nos clients dans l'optimisation des performances de leurs
+                    équipements et
+                    l'amélioration de leur efficacité opérationnelle.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section - With Images -->
+    <section id="why-us" class="py-16 bg-gradient-to-br from-slate-50 to-slate-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">POURQUOI NOUS ?</h2>
+            <p class="text-center text-slate-600 max-w-3xl mx-auto mb-12">
+                Notre expertise et notre engagement font de nous le partenaire idéal pour vos besoins industriels
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl animate-on-scroll overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                    data-animation="animate__fadeInUp">
+                    <div class="h-48 relative">
+                        <img src="images/image6.jpg" alt="Maintenance Professionnelle"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Maintenance Professionnelle</h3>
+                        <p class="text-slate-600">
+                            Nous offrons des services de maintenance incluant l'inspection,
+                            la réparation et l'entretien des équipements industriels. Notre équipe intervient
+                            rapidement pour minimiser les temps d'arrêt coûteux.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-xl animate-on-scroll overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                    data-animation="animate__fadeInUp">
+                    <div class="h-48 relative">
+                        <img src="images/image5.png" alt="Solutions Clé en Main" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Solutions Clé en Main</h3>
+                        <p class="text-slate-600">
+                            Dans le domaine de l'automatisation et de la robotique, nous
+                            proposons des solutions clé en main, de la conception à l'installation
+                            de systèmes automatisés adaptés à vos besoins.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl animate-on-scroll overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                    data-animation="animate__fadeInUp">
+                    <div class="h-48 relative">
+                        <img src="images/image1.jpeg" alt="Expertise Technique" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Expertise Technique</h3>
+                        <p class="text-slate-600">
+                            Notre expertise couvre la programmation de PLC, la configuration
+                            de systèmes de contrôle et l'intégration de composants électromécaniques
+                            avec les dernières technologies.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white rounded-xl animate-on-scroll overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                    data-animation="animate__fadeInUp">
+                    <div class="h-48 relative">
+                        <img src="images/is-guvenliginin-onemi-03.webp" alt="Sécurité et Environnement"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Sécurité et Environnement</h3>
+                        <p class="text-slate-600">
+                            La sécurité et le respect des normes sont notre priorité, tout
+                            comme notre engagement envers l'environnement, en favorisant
+                            l'efficacité énergétique et la réduction des déchets.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">NOTRE EXPERTISE</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+                <!-- Expertise Item 1 -->
+                <div class="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 relative">
+                    <div class="flex items-center gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="h-20 w-20 rounded-full overflow-hidden border-4 border-primary/20">
+                                <img src="images/technologie/robotique.jpg" alt="Robotique"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl">Robotique</h3>
+                            <p class="text-slate-600 mt-1">Automatisation et intégration de systèmes robotiques</p>
+                        </div>
+                        <div
+                            class="absolute top-2 right-2 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">
+                            1</div>
+                    </div>
+                </div>
+
+                <!-- Expertise Item 2 -->
+                <div class="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 relative">
+                    <div class="flex items-center gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="h-20 w-20 rounded-full overflow-hidden border-4 border-primary/20">
+                                <img src="images/technologie/chario.jpg" alt="Chariots élévateurs"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl">Chariots élévateurs</h3>
+                            <p class="text-slate-600 mt-1">Maintenance et réparation d'engins de levage</p>
+                        </div>
+                        <div
+                            class="absolute top-2 right-2 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">
+                            2</div>
+                    </div>
+                </div>
+
+                <!-- Expertise Item 3 -->
+                <div class="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 relative">
+                    <div class="flex items-center gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="h-20 w-20 rounded-full overflow-hidden border-4 border-primary/20">
+                                <img src="images/technologie/porte_logique.webp" alt="Portes logistiques"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl">Portes logistiques</h3>
+                            <p class="text-slate-600 mt-1">Installation et maintenance de portes industrielles</p>
+                        </div>
+                        <div
+                            class="absolute top-2 right-2 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">
+                            3</div>
+                    </div>
+                </div>
+
+                <!-- Expertise Item 4 -->
+                <div class="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 relative">
+                    <div class="flex items-center gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="h-20 w-20 rounded-full overflow-hidden border-4 border-primary/20">
+                                <img src="images/technologie/API.jpg" alt="Automates programmables"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl">Automates programmables</h3>
+                            <p class="text-slate-600 mt-1">Programmation et maintenance d'API industriels</p>
+                        </div>
+                        <div
+                            class="absolute top-2 right-2 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">
+                            4</div>
+                    </div>
+                </div>
+
+                <!-- Expertise Item 5 -->
+                <div class="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 relative">
+                    <div class="flex items-center gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="h-20 w-20 rounded-full overflow-hidden border-4 border-primary/20">
+                                <img src="images/technologie/mesure.jpg" alt="Instruments de mesure"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl">Instruments de mesure</h3>
+                            <p class="text-slate-600 mt-1">Calibration et maintenance d'appareils de mesure</p>
+                        </div>
+                        <div
+                            class="absolute top-2 right-2 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">
+                            5</div>
+                    </div>
+                </div>
+
+                <!-- Expertise Item 6 -->
+                <div class="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 relative">
+                    <div class="flex items-center gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="h-20 w-20 rounded-full overflow-hidden border-4 border-primary/20">
+                                <img src="images/technologie/servoe.png" alt="Servo-drives"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl">Servo-drives</h3>
+                            <p class="text-slate-600 mt-1">Installation et maintenance de servo-moteurs</p>
+                        </div>
+                        <div
+                            class="absolute top-2 right-2 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">
+                            6</div>
+                    </div>
+                </div>
+
+                <!-- Expertise Item 7 -->
+                <div class="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 relative">
+                    <div class="flex items-center gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="h-20 w-20 rounded-full overflow-hidden border-4 border-primary/20">
+                                <img src="images/technologie/vettesse.jpg" alt="Variateurs de vitesse"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl">Variateurs de vitesse</h3>
+                            <p class="text-slate-600 mt-1">Installation et paramétrage multi-marques</p>
+                        </div>
+                        <div
+                            class="absolute top-2 right-2 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">
+                            7</div>
+                    </div>
+                </div>
+
+                <!-- Expertise Item 8 -->
+                <div class="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 relative">
+                    <div class="flex items-center gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="h-20 w-20 rounded-full overflow-hidden border-4 border-primary/20">
+                                <img src="https://placehold.co/200x200?text=Régulation" alt="Équipements de régulation"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl">Régulation et interfaces</h3>
+                            <p class="text-slate-600 mt-1">Configuration de systèmes de contrôle industriels</p>
+                        </div>
+                        <div
+                            class="absolute top-2 right-2 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">
+                            8</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualities Section -->
+    <section id="qualities" class="py-16 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">NOS QUALITÉS</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Quality Item 1 -->
+                <div class="flex gap-4">
+                    <div
+                        class="mt-1 bg-primary/10 p-2 rounded-full h-10 w-10 flex items-center justify-center text-primary">
+                        <i data-lucide="check-circle-2" class="h-6 w-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Qualité Garantie</h3>
+                        <p class="text-slate-500">Notre maintenance électronique et instrumentation assure la qualité
+                            pour des équipements solides et fiables.</p>
+                    </div>
+                </div>
+
+                <!-- Quality Item 2 -->
+                <div class="flex gap-4">
+                    <div
+                        class="mt-1 bg-primary/10 p-2 rounded-full h-10 w-10 flex items-center justify-center text-primary">
+                        <i data-lucide="shield-check" class="h-6 w-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Sécurité Avant Tout</h3>
+                        <p class="text-slate-500">En respectant rigoureusement les normes, nous renforçons la sécurité
+                            et la confiance.</p>
+                    </div>
+                </div>
+
+                <!-- Quality Item 3 -->
+                <div class="flex gap-4">
+                    <div
+                        class="mt-1 bg-primary/10 p-2 rounded-full h-10 w-10 flex items-center justify-center text-primary">
+                        <i data-lucide="clock" class="h-6 w-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Production Ininterrompue</h3>
+                        <p class="text-slate-500">Nous maintenons votre production sans interruption grâce à des
+                            réparations efficaces.</p>
+                    </div>
+                </div>
+
+                <!-- Quality Item 4 -->
+                <div class="flex gap-4">
+                    <div
+                        class="mt-1 bg-primary/10 p-2 rounded-full h-10 w-10 flex items-center justify-center text-primary">
+                        <i data-lucide="zap" class="h-6 w-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Réactivité Prépondérante</h3>
+                        <p class="text-slate-500">Nos stocks et expertise résolvent rapidement les besoins courants et
+                            les défis spécifiques.</p>
+                    </div>
+                </div>
+
+                <!-- Quality Item 5 -->
+                <div class="flex gap-4">
+                    <div
+                        class="mt-1 bg-primary/10 p-2 rounded-full h-10 w-10 flex items-center justify-center text-primary">
+                        <i data-lucide="settings-2" class="h-6 w-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Solutions Personnalisées</h3>
+                        <p class="text-slate-500">Des interventions adaptées à vos besoins, garantissant une efficacité
+                            maximale.</p>
+                    </div>
+                </div>
+
+                <!-- Quality Item 6 -->
+                <div class="flex gap-4">
+                    <div
+                        class="mt-1 bg-primary/10 p-2 rounded-full h-10 w-10 flex items-center justify-center text-primary">
+                        <i data-lucide="user-check" class="h-6 w-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Partenariat Fiable</h3>
+                        <p class="text-slate-500">Notre engagement sincère établit un partenariat de confiance pour une
+                            réussite à long terme.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">TARIFS ET ENGAGEMENTS</h2>
+            <p class="text-center text-slate-600 max-w-3xl mx-auto mb-12">
+                Des solutions adaptées à vos besoins avec un engagement de qualité
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Pricing Card -->
+                <div class="bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl shadow-lg overflow-hidden">
+                    <div class="bg-primary text-white p-6">
+                        <h3 class="text-2xl font-bold mb-2">Nos Tarifs</h3>
+                        <p class="opacity-90">Flexibles et adaptés à vos besoins</p>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm">
+                            <div class="bg-primary/10 p-2 rounded-full">
+                                <i data-lucide="check-circle-2" class="h-5 w-5 text-primary"></i>
+                            </div>
+                            <p>Tarifs sur mesure selon vos besoins spécifiques</p>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm">
+                            <div class="bg-primary/10 p-2 rounded-full">
+                                <i data-lucide="check-circle-2" class="h-5 w-5 text-primary"></i>
+                            </div>
+                            <p>Proposition de contrats annuels pour une gestion budgétaire optimale</p>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm">
+                            <div class="bg-primary/10 p-2 rounded-full">
+                                <i data-lucide="check-circle-2" class="h-5 w-5 text-primary"></i>
+                            </div>
+                            <p>Engagement à fournir le meilleur service au meilleur prix</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Commitments Card -->
+                <div class="bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl shadow-lg overflow-hidden">
+                    <div class="bg-primary text-white p-6">
+                        <h3 class="text-2xl font-bold mb-2">Nos Engagements</h3>
+                        <p class="opacity-90">Disponibilité et professionnalisme</p>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm">
+                            <div class="bg-primary/10 p-2 rounded-full">
+                                <i data-lucide="clock" class="h-5 w-5 text-primary"></i>
+                            </div>
+                            <p>Interventions 24h/24h en cas d'urgence</p>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm">
+                            <div class="bg-primary/10 p-2 rounded-full">
+                                <i data-lucide="truck" class="h-5 w-5 text-primary"></i>
+                            </div>
+                            <p>Présence sur votre site d'exploitation et chantiers</p>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm">
+                            <div class="bg-primary/10 p-2 rounded-full">
+                                <i data-lucide="user-check" class="h-5 w-5 text-primary"></i>
+                            </div>
+                            <p>Suivi personnalisé et relation client privilégiée</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-2 text-center">
+                        <button class="px-4 py-2 rounded-md bg-primary hover:bg-primary/90 text-white">
+                            <a href="contact.html">Demande un Devis</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="py-16 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">CLIENTS QUI NOUS ONT FAIT CONFIANCE</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+                <div class="w-40 h-20 bg-white rounded-lg shadow-sm flex items-center justify-center">
+                    <img src="images/technologie/sofadex.webp" alt="Client logo 1" width="160" height="80">
+                </div>
+                <div class="w-40 h-20 bg-white rounded-lg shadow-sm flex items-center justify-center">
+                    <img src="images/technologie/RocaLogo.svg.png" alt="Client logo 2" width="160" height="80">
+                </div>
+                <div class="w-40 h-20 bg-white rounded-lg shadow-sm flex items-center justify-center">
+                    <img src="images/technologie/scs.webp" alt="Client logo 3" width="160" height="80">
+                </div>
+                <div class="w-40 h-20 bg-white rounded-lg shadow-sm flex items-center justify-center">
+                    <img src="images/technologie/oficab-icon.png" alt="Client logo 4" width="160" height="80">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section with Infinite Scroll -->
+    <section class="py-16 bg-white overflow-hidden">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">TECHNOLOGIES</h2>
+            <div class="relative">
+                <div class="tech-scroll flex gap-8 items-center">
+                    <!-- First set of technologies -->
+                    <div
+                        class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
+                        <img src="images/technologie/9-medium_default.jpg" alt="Technology 1" width="100" height="100">
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
+                        <img src="images/technologie/allen_bradley_logo-scaled-1-2.png" alt="Technology 2" width="100"
+                            height="100">
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
+                        <img src="images/technologie/danfoss-chauffage-logo.jpg" alt="Technology 3" width="100"
+                            height="100">
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
+                        <img src="images/technologie/expertise.jpg" alt="Technology 4" width="100" height="100">
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
+                        <img src="images/technologie/kuka.png" alt="Technology 5" width="100" height="100">
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
+                        <img src="images/technologie/Schneider-Electric-logo-jpg-.png" alt="Technology 6" width="100"
+                            height="100">
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
+                        <img src="images/technologie/Toyota_Industrial_Equipment_Logo.jpg" alt="Technology 7"
+                            width="100" height="100">
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
+                        <img src="images/technologie/partner_festo.png" alt="Technology 8" width="100" height="100">
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
+                        <img src="images/technologie/SEW_LOGO.svg.png" alt="Technology 9" width="100" height="100">
+                    </div>
+
+                    <!-- Duplicate for seamless loop -->
+                    <div
+                        class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
+                        <img src="images/technologie/allen_bradley_logo-scaled-1-2.png" alt="Technology 1" width="100"
+                            height="100">
+                    </div>
+
+                    <div
+                        class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
+                        <img src="images/technologie/partner_festo.png" alt="Technology 3" width="100" height="100">
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
+                        <img src="images/technologie/expertise.jpg" alt="Technology 4" width="100" height="100">
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
+                        <img src="images/technologie/SEW_LOGO.svg.png" alt="Technology 5" width="100" height="100">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Map -->
+    <section id="contact" class="py-16 bg-[rgb(217,222,233)] text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">CONTACTEZ-NOUS</h2>
+            <div class="grid md:grid-cols-2 gap-6 max-w-7xl ">
+                <!-- Contact Information -->
+                <div class="p-6 bg-slate-800 rounded-lg shadow-md">
+                    <!-- Site Name at the Top -->
+                    <div class="flex items-center gap-3 mb-6">
+                        <i data-lucide="phone" class="h-5 w-5 text-primary"></i>
+                        <p class="text-lg font-semibold">FACTORY GEAR</p>
+                    </div>
+
+                    <!-- Contact Details and Opening Hours -->
+                    <div class="space-y-4">
+                        <!-- Address -->
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="map-pin" class="h-5 w-5 text-primary"></i>
+                            <p>2 rue Yacoub El Mansour, Tanger 90000</p>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="mail" class="h-5 w-5 text-primary"></i>
+                            <a href="mailto:contact@factorygear.ma" class="hover:text-primary transition-colors">
+                                contact@factorygear.ma
+                            </a>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="phone" class="h-5 w-5 text-primary"></i>
+                            <a href="tel:+2125XXXXXXX" class="hover:text-primary transition-colors">
+                                +212 5XX XX XX XX
+                            </a>
+                        </div>
+
+                        <!-- Opening Hours -->
+                        <div class="pt-4">
+                            <h3 class="text-lg font-semibold mb-3">Heures d'ouverture</h3>
+                            <p>Lundi - Vendredi: 8h00 - 18h00</p>
+                            <p>Samedi: 9h00 - 13h00</p>
+                            <p>Dimanche: Fermé</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed -->
+                <div class="h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-lg">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.6761372911647!2d-5.8134899!3d35.7651356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b875cf04c132d%3A0x76bfc571bfb4e747!2sTanger%2C%20Morocco!5e0!3m2!1sen!2sus!4v1647887291102!5m2!1sen!2sus"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        aria-label="Carte de localisation de Factory Gear à Tanger"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="py-6 bg-slate-950 text-slate-400">
+        <div class="container mx-auto px-4 text-center">
+            <p>© <span id="current-year"></span> FACTORY GEAR. Tous droits réservés.</p>
+            <p class="mt-2">Développé par <span class="text-primary">Abdelkhalek Essaidi</span></p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer"
+        class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#128C7E] transition-colors duration-300"
+        aria-label="Contact us on WhatsApp">
+        <i data-lucide="phone" class="h-6 w-6"></i>
+    </a>
+
+    <!-- Email Button -->
+    <a href="mailto:your-email@example.com"
+        class="fixed bottom-6 mr-1 right-20 z-50 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-500 transition-colors duration-300"
+        aria-label="Contact us via Email">
+        <i data-lucide="mail-plus" class="h-6 w-6"></i>
+    </a>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const mobileMenuButton = document.getElementById("mobile-menu-button");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            mobileMenuButton.addEventListener("click", function () {
+                // Toggle the mobile menu visibility with smooth transition
+                if (mobileMenu.classList.contains("max-h-0")) {
+                    mobileMenu.classList.remove("max-h-0");
+                    mobileMenu.classList.add("max-h-96"); // Adjust this value based on your content height
+                } else {
+                    mobileMenu.classList.remove("max-h-96");
+                    mobileMenu.classList.add("max-h-0");
+                }
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
