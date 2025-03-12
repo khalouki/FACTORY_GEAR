@@ -43,6 +43,7 @@ tailwind.config = {
         }
     }
 }
+/*
 document.addEventListener("DOMContentLoaded", function () {
     // Select all elements with the 'animate-on-scroll' class
     const animatedElements = document.querySelectorAll(".animate-on-scroll");
@@ -55,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     // Get the animation class from the data-animation attribute
                     const animationClass = entry.target.getAttribute("data-animation");
                     // Add the animation class to the element
-                    entry.target.classList.add("animate__animated",animationClass);
+                    entry.target.classList.add("animate__animated", animationClass);
                     observer.unobserve(entry.target); // Stop observing after animation is triggered
                 }
             });
@@ -70,3 +71,4 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(element);
     });
 });
+*/

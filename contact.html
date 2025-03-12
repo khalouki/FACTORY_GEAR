@@ -9,18 +9,30 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body class="min-h-screen bg-gray-100">
     <!-- Contact Header -->
-    <div class="relative text-white py-32 pt-40" style="background-image: url('images/technologie/contact2.webp'); background-size: cover;">
+    <!-- Header/Navigation -->
+    <header class="sticky  top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+        <div class="container mx-auto px-4 flex h-16 items-center justify-center">
+            <!-- Logo -->
+            <div class="flex justify-center items-center">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Logo" class="h-[4.5rem]">
+                </a>
+            </div>
+
+        </div>
+
+
+    </header>
+    <div class="relative text-white py-32 pt-40"
+        style="background-image: url('images/technologie/contact2.webp'); background-size: cover;">
         <!-- Blur Overlay -->
         <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
-    
+
         <!-- Content -->
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fadeIn">Contact Us</h1>
@@ -40,21 +52,24 @@
                     Our customer service team is ready to assist you with any inquiries about our industrial products,
                     robot maintenance services, or forklift repairs.
                 </p>
+                
 
+                <!-- Your Content -->
                 <div class="space-y-6">
+                    <!-- Location -->
                     <div class="flex items-start">
-                        <div class="flex-shrink-0  p-3 rounded-full text-white mr-4">
+                        <div class="flex-shrink-0 bg-gray-800 p-3 rounded-full text-white mr-4">
                             <i data-lucide="map-pinned" class="h-6 w-6"></i>
                         </div>
                         <div>
                             <h3 class="text-lg font-medium text-gray-800">Our Location</h3>
                             <p class="text-gray-600 mt-1">
                                 2 rue Yacoub El Mansour,<br> Tanger 90000
-                                
                             </p>
                         </div>
                     </div>
 
+                    <!-- Phone -->
                     <div class="flex items-start">
                         <div class="flex-shrink-0 bg-gray-800 p-3 rounded-full text-white mr-4">
                             <i data-lucide="phone" class="h-6 w-6"></i>
@@ -68,6 +83,7 @@
                         </div>
                     </div>
 
+                    <!-- Email -->
                     <div class="flex items-start">
                         <div class="flex-shrink-0 bg-gray-800 p-3 rounded-full text-white mr-4">
                             <i data-lucide="mail" class="h-6 w-6"></i>
@@ -81,6 +97,7 @@
                         </div>
                     </div>
 
+                    <!-- Business Hours -->
                     <div class="flex items-start">
                         <div class="flex-shrink-0 bg-gray-800 p-3 rounded-full text-white mr-4">
                             <i data-lucide="clock" class="h-6 w-6"></i>
@@ -161,8 +178,12 @@
             <p class="mt-2">Développé par <span class="text-primary">Abdelkhalek Essaidi</span></p>
         </div>
     </footer>
-
-    <script src="../js/script.js"></script>
+<!-- Include Lucide Icons Library -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+</script>
 </body>
 
 </html>

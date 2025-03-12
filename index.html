@@ -12,38 +12,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Animate cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <style>
-        #mobile-menu {
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            transform-origin: top;
-            opacity: 0;
-            transform: scaleY(0);
-        }
-
-        #mobile-menu:not(.hidden) {
-            opacity: 1;
-            transform: scaleY(1);
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
-        .tech-scroll {
-            animation: scroll 30s linear infinite;
-            width: max-content;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <!-- logo de site-->
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
 <body class="min-h-screen bg-white">
@@ -51,7 +25,11 @@
     <header class="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
         <div class="container mx-auto px-4 flex h-16 items-center justify-between">
             <!-- Logo -->
-            <div class="font-bold text-xl">FACTORY GEAR</div>
+            <div class="flex items-center">
+                <a href="">
+                    <img src="images/logo.png" alt="Logo" class="h-[4.5rem]">
+                </a>
+            </div>
 
             <!-- Desktop Navigation (Hidden on Mobile) -->
             <nav class="hidden md:flex gap-6">
@@ -104,8 +82,9 @@
     </header>
 
     <!-- Hero Section with Carousel -->
-    <section class="relative h-[80vh] flex items-center justify-center bg-[#000000a1] text-white overflow-hidden">
+    <section id="hed" class="relative h-[80vh] flex items-center justify-center bg-[#000000a1] text-white overflow-hidden">
         <div id="hero-carousel" class="absolute inset-0">
+           
             <!-- Background images will be inserted here by JavaScript -->
         </div>
         <div class="container mx-auto px-4 relative z-10 text-center space-y-6">
@@ -152,7 +131,6 @@
             <p class="text-center text-slate-600 max-w-3xl mx-auto mb-12">
                 Notre expertise et notre engagement font de nous le partenaire idéal pour vos besoins industriels
             </p>
-
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
                 <!-- Card 1 -->
                 <div class="bg-white rounded-xl animate-on-scroll overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
@@ -366,7 +344,7 @@
                     <div class="flex items-center gap-4">
                         <div class="flex-shrink-0">
                             <div class="h-20 w-20 rounded-full overflow-hidden border-4 border-primary/20">
-                                <img src="https://placehold.co/200x200?text=Régulation" alt="Équipements de régulation"
+                                <img src="images/regulation.jpeg" alt="Équipements de régulation"
                                     class="w-full h-full object-cover">
                             </div>
                         </div>
@@ -548,7 +526,7 @@
             <h2 class="text-3xl font-bold text-center mb-12">CLIENTS QUI NOUS ONT FAIT CONFIANCE</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
                 <div class="w-40 h-20 bg-white rounded-lg shadow-sm flex items-center justify-center">
-                    <img src="images/technologie/sofadex.webp" alt="Client logo 1" width="160" height="80">
+                    <img src="images/technologie/tech4.webp" alt="Client logo 1" width="160" height="80">
                 </div>
                 <div class="w-40 h-20 bg-white rounded-lg shadow-sm flex items-center justify-center">
                     <img src="images/technologie/RocaLogo.svg.png" alt="Client logo 2" width="160" height="80">
@@ -572,63 +550,60 @@
                     <!-- First set of technologies -->
                     <div
                         class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
-                        <img src="images/technologie/9-medium_default.jpg" alt="Technology 1" width="100" height="100">
+                        <img src="images/technologie/tech1.jpg" alt="Technology 1" width="100" height="100">
                     </div>
                     <div
                         class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
-                        <img src="images/technologie/allen_bradley_logo-scaled-1-2.png" alt="Technology 2" width="100"
-                            height="100">
+                        <img src="images/technologie/tech2.png" alt="Technology 2" width="100" height="100">
                     </div>
                     <div
                         class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
-                        <img src="images/technologie/danfoss-chauffage-logo.jpg" alt="Technology 3" width="100"
-                            height="100">
+                        <img src="images/technologie/tech3.jpg" alt="Technology 3" width="100" height="100">
                     </div>
                     <div
                         class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
-                        <img src="images/technologie/expertise.jpg" alt="Technology 4" width="100" height="100">
+                        <img src="images/technologie/company1.png" alt="Technology 4" width="100" height="100">
                     </div>
                     <div
                         class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
-                        <img src="images/technologie/kuka.png" alt="Technology 5" width="100" height="100">
+                        <img src="images/technologie/tech5.jpg" alt="Technology 5" width="100" height="100">
                     </div>
                     <div
                         class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
-                        <img src="images/technologie/Schneider-Electric-logo-jpg-.png" alt="Technology 6" width="100"
-                            height="100">
+                        <img src="images/technologie/tech6.png" alt="Technology 6" width="100" height="100">
                     </div>
                     <div
                         class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
-                        <img src="images/technologie/Toyota_Industrial_Equipment_Logo.jpg" alt="Technology 7"
-                            width="100" height="100">
+                        <img src="images/technologie/tech7.png" alt="Technology 7" width="100" height="100">
                     </div>
-                    <div
-                        class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
-                        <img src="images/technologie/partner_festo.png" alt="Technology 8" width="100" height="100">
-                    </div>
-                    <div
-                        class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
-                        <img src="images/technologie/SEW_LOGO.svg.png" alt="Technology 9" width="100" height="100">
-                    </div>
-
                     <!-- Duplicate for seamless loop -->
                     <div
                         class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
-                        <img src="images/technologie/allen_bradley_logo-scaled-1-2.png" alt="Technology 1" width="100"
-                            height="100">
-                    </div>
-
-                    <div
-                        class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
-                        <img src="images/technologie/partner_festo.png" alt="Technology 3" width="100" height="100">
+                        <img src="images/technologie/tech1.jpg" alt="Technology 1" width="100" height="100">
                     </div>
                     <div
                         class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
-                        <img src="images/technologie/expertise.jpg" alt="Technology 4" width="100" height="100">
+                        <img src="images/technologie/tech2.png" alt="Technology 2" width="100" height="100">
                     </div>
                     <div
                         class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
-                        <img src="images/technologie/SEW_LOGO.svg.png" alt="Technology 5" width="100" height="100">
+                        <img src="images/technologie/tech3.jpg" alt="Technology 3" width="100" height="100">
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
+                        <img src="images/technologie/company1.png" alt="Technology 4" width="100" height="100">
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
+                        <img src="images/technologie/tech5.jpg" alt="Technology 5" width="100" height="100">
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
+                        <img src="images/technologie/tech6.png" alt="Technology 6" width="100" height="100">
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
+                        <img src="images/technologie/tech7.png" alt="Technology 7" width="100" height="100">
                     </div>
 
                 </div>
@@ -639,7 +614,7 @@
     <!-- Contact Section with Map -->
     <section id="contact" class="py-16 bg-[rgb(217,222,233)] text-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">CONTACTEZ-NOUS</h2>
+            <h2 class="text-3xl text-black font-bold text-center mb-12">CONTACTEZ-NOUS</h2>
             <div class="grid md:grid-cols-2 gap-6 max-w-7xl ">
                 <!-- Contact Information -->
                 <div class="p-6 bg-slate-800 rounded-lg shadow-md">
@@ -694,10 +669,10 @@
         </div>
     </section>
     <!-- Footer -->
-    <footer class="py-6 bg-slate-950 text-slate-400">
-        <div class="container mx-auto px-4 text-center">
-            <p>© <span id="current-year"></span> FACTORY GEAR. Tous droits réservés.</p>
-            <p class="mt-2">Développé par <span class="text-primary">Abdelkhalek Essaidi</span></p>
+    <footer class="py-6 bg-slate-950 text-slate-400 font-bold text-white"">
+        <div class=" container mx-auto px-4 text-center">
+        <p>© <span id="current-year"></span> FACTORY GEAR. Tous droits réservés.</p>
+        <p class="mt-2">Développé par <span class="text-primary">Abdelkhalek Essaidi</span></p>
         </div>
     </footer>
 
