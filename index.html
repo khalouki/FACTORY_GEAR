@@ -12,13 +12,15 @@
     <title>Factory Gear - Automatisme, Robotique & Maintenance Industrielle</title>
 
     <!-- Meta Description (très important pour le SEO) -->
-    <meta name="description" content="Factory Gear propose des solutions innovantes en automatisme, robotique et maintenance industrielle. Optimisez vos performances avec nos services professionnels.">
+    <meta name="description"
+        content="Factory Gear propose des solutions innovantes en automatisme, robotique et maintenance industrielle. Optimisez vos performances avec nos services professionnels.">
 
     <!-- Keywords (moins important aujourd'hui, mais toujours utile) -->
-    <meta name="keywords" content="automatisme, robotique, maintenance industrielle, solutions industrielles, Factory Gear, Tanger">
+    <meta name="keywords"
+        content="automatisme, robotique, maintenance industrielle, solutions industrielles, Factory Gear, Tanger">
 
     <!-- Auteur du site -->
-    <meta name="" content="Abdelkhalek Essaid, Développeur">
+    <meta name="author" content="Abdelkhalek Essaid, Développeur">
 
 
     <!-- Favicon -->
@@ -42,6 +44,19 @@
 
     <!-- Feuille de style personnalisée -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Configuration Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F4C81',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body class="min-h-screen bg-white">
@@ -106,13 +121,39 @@
     </header>
 
     <!-- Hero Section with Carousel -->
-    <section id="hed"
-        class="relative h-[86vh] flex items-center justify-center bg-[#000000d9] text-white overflow-hidden">
+    <section class="relative h-[86vh] flex items-center justify-center bg-[#000000d9] text-white overflow-hidden">
+        <!-- Carousel Container -->
         <div id="hero-carousel" class="absolute inset-0">
-            <!-- Background images will be inserted here by JavaScript -->
+            <!-- Background images -->
+            <div class="carousel-item">
+                <img src="images/HERO_IMAGE/IMG-20250318-WA0001.jpg" alt="Hero Image 1" class="w-full h-full object-cover">
+                <div class="black-overlay"></div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/HERO_IMAGE/IMG-20250318-WA0002.jpg" alt="Hero Image 2" class="w-full h-full object-cover">
+                <div class="black-overlay"></div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/HERO_IMAGE/IMG-20250318-WA0003.jpg" alt="Hero Image 3" class="w-full h-full object-cover">
+                <div class="black-overlay"></div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/HERO_IMAGE/IMG-20250318-WA0004.jpg" alt="Hero Image 4" class="w-full h-full object-cover">
+                <div class="black-overlay"></div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/HERO_IMAGE/IMG-20250318-WA0005.jpg" alt="Hero Image 5" class="w-full h-full object-cover">
+                <div class="black-overlay"></div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/HERO_IMAGE/IMG-20250318-WA0006.jpg" alt="Hero Image 6" class="w-full h-full object-cover">
+                <div class="black-overlay"></div>
+            </div>
         </div>
+    
+        <!-- Text Content -->
         <div class="container mx-auto px-4 relative z-10 text-center space-y-6 animate__animated animate__fadeInUp">
-            <h1  class="text-4xl md:text-6xl font-bold tracking-tight">
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight">
                 AUTOMATISME . ROBOTIQUE . MAINTENANCE
             </h1>
             <p class="text-xl max-w-3xl mx-auto">
@@ -122,8 +163,12 @@
                 <button class="px-6 py-3 text-lg font-medium rounded-md bg-primary hover:bg-primary/90 text-white">
                     <a href="#expertise">Nos Service</a>
                 </button>
-
             </div>
+        </div>
+    
+        <!-- Carousel navigation dots -->
+        <div class="absolute bottom-8 left-0 right-0 flex justify-center gap-2 z-20" id="carousel-dots">
+            <!-- Dots will be added by JavaScript -->
         </div>
     </section>
 
@@ -537,10 +582,8 @@
                     </div>
                     <div class="p-6 pt-2 text-center">
                         <button class="px-4 py-2 rounded-md bg-primary hover:bg-primary/90 text-white">
-                            <a href="mailto:Contact@factorygear.ma" target="_blank"
-                                >Demande un Devis
+                            <a href="mailto:contact@factorygear.ma" target="_blank">Demande un Devis
                             </a>
-                            
                         </button>
                     </div>
                 </div>
@@ -611,7 +654,6 @@
                         class="flex-shrink-0 w-32 h-32 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center">
                         <img src="images/technologie/tech7.png" alt="Technology 7" width="100" height="100">
                     </div>
-
                 </div>
             </div>
         </div>
@@ -629,7 +671,7 @@
                         <i data-lucide="phone" class="h-5 w-5 text-primary"></i>
                         <p class="text-lg font-semibold">FACTORY GEAR</p>
                     </div>
-    
+
                     <!-- Contact Details and Opening Hours -->
                     <div class="space-y-4">
                         <!-- Address -->
@@ -637,23 +679,23 @@
                             <i data-lucide="map-pin" class="h-5 w-5 text-primary"></i>
                             <p>2 rue Yacoub El Mansour, Tanger 90000</p>
                         </div>
-    
+
                         <!-- Email -->
                         <div class="flex items-center gap-3">
                             <i data-lucide="mail" class="h-5 w-5 text-primary"></i>
                             <a href="mailto:contact@factorygear.ma" class="hover:text-primary transition-colors">
-                                Contact@factorygear.ma
+                                contact@factorygear.ma
                             </a>
                         </div>
-    
+
                         <!-- Phone -->
                         <div class="flex items-center gap-3">
                             <i data-lucide="phone" class="h-5 w-5 text-primary"></i>
-                            <a href="tel:+2125XXXXXXX" class="hover:text-primary transition-colors">
+                            <a href="tel:+212666227221" class="hover:text-primary transition-colors">
                                 +212 666227221 / +212 670115900
                             </a>
                         </div>
-    
+
                         <!-- Opening Hours -->
                         <div class="pt-4">
                             <h3 class="text-lg font-semibold mb-3">Heures d'ouverture</h3>
@@ -662,18 +704,17 @@
                             <p>Dimanche: Fermé</p>
                         </div>
                     </div>
-    
+
                     <!-- Contact Button -->
                     <div class="text-center">
                         <button class="px-4 py-2 rounded-md bg-[#9292c7] hover:bg-primary/90 text-white">
-                            <a href="mailto:Contact@factorygear.ma" target="_blank"
-                                rel="noopener noreferrer">
+                            <a href="mailto:contact@factorygear.ma" target="_blank" rel="noopener noreferrer">
                                 Contactez-nous
                             </a>
                         </button>
                     </div>
                 </div>
-    
+
                 <!-- Google Maps Embed -->
                 <div class="flex-1 rounded-lg overflow-hidden shadow-lg aspect-[4/3]">
                     <iframe
@@ -699,16 +740,14 @@
         </div>
     </footer>
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/0666227221" target="_blank" rel="noopener noreferrer"
+    <a href="https://wa.me/212666227221" target="_blank" rel="noopener noreferrer"
         class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#128C7E] transition-colors duration-300"
         aria-label="Contact us on WhatsApp">
         <i data-lucide="phone" class="h-6 w-6"></i>
     </a>
 
     <!-- Email Button -->
-    <a href="mailto:Contact@factorygear.ma"
-        class="fixed bottom-6 mr-1 right-20 z-50 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-500 transition-colors duration-300"
-        aria-label="Contact us via Email" target="_blank" rel="noopener noreferrer">
+    <a href="mailto:contact@factorygear.ma" class="fixed bottom-6 mr-1 right-20 z-50 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-500 transition-colors duration-300" aria-label="Contact us via Email" target="_blank" rel="noopener noreferrer">
         <i data-lucide="mail-plus" class="h-6 w-6"></i>
     </a>
     <script src="script.js"></script>
