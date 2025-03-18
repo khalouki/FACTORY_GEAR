@@ -104,7 +104,7 @@ html {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #0000008f; /* Black overlay with 50% opacity */
+        background-color: #0000007d; /* Black overlay with 50% opacity */
         /* backdrop-filter: blur(3px); /* Blur effect */
         /*-webkit-backdrop-filter: blur(3px); /* For Safari */
         z-index: 1;
