@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Reset interval when manually changing slides
     dotsContainer.addEventListener('click', () => {
         clearInterval(interval);
-        interval = setInterval(nextSlide, 5000);
+        interval = setInterval(nextSlide, 50000);
     });
 });
 // Mobile menu functionality
